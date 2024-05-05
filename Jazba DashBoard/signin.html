@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin form</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white flex justify-center items-center h-screen">
+    <div class="bg-sky-900 p-6 rounded-md shadow-md w-96 text-white">
+        <h2 class="text-2xl font-semibold mb-4 text-center"> Sign In</h2>
+        <form action="http://localhost:3000/api/employees" method="POST" class="space-y-4"
+            enctype="multipart/form-data">
+            
+            <div>
+                <label for="user_email" class="block text-sm font-medium  text-white">E-mail</label>
+                <input type="Email" name="user_email" id="user_email" placeholder="example@gmaill.com" required
+                class="mt-1 p-2 border border-gray-300 rounded-md text-black w-full focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+            <div>
+                <label for="user_password" class="block text-sm font-medium text-white">Password</label>
+                <input type="Password" name="user_password" id="user_password" value="" required
+                    class="mt-1 p-2 border text-black border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+
+           
+
+            <div class="flex justify-center">
+                <button type="button" name="signinBtn" id="signinBtn"
+                    class="py-2 px-6 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500">signin</button>
+                <button type="button" id="cancelBtn" name="cancelBtn"
+                    class="ml-4 py-2 px-6 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">Cancel</button>
+            </div>
+
+            <div class="flex justify-center">
+                <label for="facebook"
+                    class="py-2 px-6 text-white font- rounded-md hover:bg-transparent hover:font-bold hover:border-white focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center space-x-2">
+
+                    <span class="mr-2">
+                        <img src="images/facebook.png" alt="#" class="w-5">
+                    </span>
+                    connect with facebook</label>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Add Employee</h2>
+        <form action="http://localhost:3000/api/employees" method="POST" class="space-y-4" enctype="multipart/form-data">
+            <div>
+                <label for="employee_name" class="block text-sm font-medium text-gray-700">Employee Name</label>
+                <input type="text" name="employee_name" id="employee_name" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div>
+                <label for="employee_phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="Number" name="employee_phone" id="employee_phone"
+                    class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div>
+                <label for="employee_designation" class="block text-sm font-medium text-gray-700">Designation</label>
+                <input type="text" name="employee_designation" id="employee_designation"
+                    class="mt-1 p-2 border rounded-md w-full">
+            </div>
+
+            <div>
+                <label for="employee_bio" class="block text-sm font-medium text-gray-700">About Employee</label>
+                <textarea name="employee_bio" id="employee_bio" rows="3"
+                    class="mt-1 p-2 border rounded-md w-full"></textarea>
+            </div>
+            <div>
+                <label for="employee_image" class="block text-sm font-medium text-gray-700">Employee Image</label>
+                <input type="file" name="employee_image" id="employee_image" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Team Type</label>
+                <div class="mt-1 space-x-4">
+                    <label for="design_team" class="inline-flex items-center">
+                        <input type="radio" id="design_team" name="employee_teamType" value="design_team"
+                            class="text-blue-500 form-radio focus:ring-blue-500">
+                        <span class="ml-2">Design Team</span>
+                    </label>
+                    <label for="3d_team" class="inline-flex items-center">
+                        <input type="radio" id="3d_team" name="employee_teamType" value="3d_team"
+                            class="text-blue-500 form-radio focus:ring-blue-500">
+                        <span class="ml-2">3D Team</span>
+                    </label>
+                    <label for="software_team" class="inline-flex items-center">
+                        <input type="radio" id="software_team" name="employee_teamType" value="software_team"
+                            class="text-blue-500 form-radio focus:ring-blue-500">
+                        <span class="ml-2">Software Development Team</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" name="updateBtn" id="updateBtn"
+                    class="py-2 px-4 bg-blue-500 text-white rounde d-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Add
+                    Employee</button>
+                <button type="button" id="cancelBtn" name="cancelBtn"
+                    class="ml-2 py-2 px-4 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

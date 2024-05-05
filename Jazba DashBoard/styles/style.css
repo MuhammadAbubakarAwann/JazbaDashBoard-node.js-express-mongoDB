@@ -1,0 +1,144 @@
+.sidebar {
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #0e0f10;
+    border: #4b5563;
+    border-color: rgb(10, 10, 10);
+}
+
+.main-content {
+    margin-left: 200px;
+
+}
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --dark: #34495e;
+    --light: #ffffff;
+    --success: #0ABF30;
+    --error: #e24d4c;
+    --warning: #E9BD0C;
+    --info: #3498DB;
+
+}
+
+.notifications{
+    
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+
+.notifications :where(.toast, .column) {
+    display: flex;
+    align-items: center;
+}
+.notifications .toast {
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 4px;
+    padding: 14px 15px;
+    margin-bottom: 10px;
+    background: var(--dark);
+    
+    justify-content: space-between;
+    animation: show_toast 0.3s ease forwards;
+
+}
+
+@keyframes show_toast {
+    0% {
+        transform: translateX(100%)
+    }
+    40% {
+        transform: translateX(-5%)
+    }
+    80% {
+        transform: translateX(0%)
+    }
+    100% {
+        transform: translateX(-10%)
+    }
+}
+.toast::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    animation: progress 5s linear forwards;
+}
+@keyframes progress {
+    100% {
+        width: 0%;
+    }
+}
+.notifications .toast.hide {
+    animation: hide_toast 0.3s ease forwards;
+  }
+  @keyframes hide_toast {
+    0% {
+      transform: translateX(-10px);
+    }
+    40% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(calc(100% + 20px));
+    }
+  }
+
+.toast.success::before{
+    background: var(--success);
+}
+.toast.error::before{
+    background: var(--error);
+}
+.toast.warning::before{
+    background: var(--warning);
+}
+.toast.info::before{
+    background: var(--info);
+}
+
+.toast.success .column i{
+    color: var(--success);
+}
+.toast.error .column i{
+    color: var(--error);
+}
+.toast.warning .column i{
+    color: var(--warning);
+}
+.toast.info .column i{
+    color: var(--info);
+}
+
+.toast .column i{
+    font-size: 1.05rem;
+}
+.toast .column span {
+    font-size: 0.80rem;
+    margin-left: 12px;
+}
+.toast i:last-child{
+    color: #aeb0d7;
+    cursor: pointer;
+}
+.toast i:last-child:hover{
+    color: var(--light);
+}

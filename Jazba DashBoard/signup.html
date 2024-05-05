@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white flex justify-center items-center h-screen">
+    <div class="bg-sky-900 p-6 rounded-md shadow-md w-96 text-white">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Sign up</h2>
+        <form action="http://localhost:3000/api/employees" method="POST" class="space-y-4"
+            enctype="multipart/form-data">
+            <div class="flex justify-center">
+                <button type="button" name="google" id="google" c
+                    class="py-2 px-6 bg-black text-white font- rounded-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-green-500 flex items-center space-x-2">
+                    <span class="mr-2">
+                        <img src="images/search.png" class="w-5 " alt="">
+                    </span>
+                    continue with G-mail
+                </button>
+            </div>
+            <div>
+                <div class="mt-1 space-x-4 flex justify-center">
+                    <label for="design_team" class="inline-flex items-center ">
+                        <input type="radio" id="user" name="user_role" value="user"
+                            class="text-green-500 form-radio focus:ring-green-500">
+                        <span class="ml-2">User</span>
+                    </label>
+                    <label for="3d_team" class="inline-flex items-center">
+                        <input type="radio" id="admin" name="user_role" value="admin"
+                            class="text-green-500 form-radio focus:ring-green-500">
+                        <span class="ml-2">Admin</span>
+                    </label>
+                    
+                </div>
+            </div>
+            <div>
+                <label for="user_name" class="block text-sm font-medium  text-white">User Name</label>
+                <input type="text" name="user_name" id="user_name" required
+                    class="mt-1 p-2 border border-gray-300 rounded-md text-black w-full focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+            <div>
+                <label for="user_email" class="block text-sm font-medium  text-white">E-mail</label>
+                <input type="Email" name="user_email" id="user_email" placeholder="example@gmaill.com" required
+                class="mt-1 p-2 border border-gray-300 rounded-md text-black w-full focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+            <div>
+                <label for="user_password" class="block text-sm font-medium text-white">Password</label>
+                <input type="Password" name="user_password" id="user_password" value="" required
+                    class="mt-1 p-2 border text-black border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-green-500">
+            </div>
+
+            <div class="flex justify-center">
+                <button type="button" name="signupBtn" id="signupBtn"
+                    class="py-2 px-6 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500">signup</button>
+                <button type="button" id="cancelBtn" name="cancelBtn"
+                    class="ml-4 py-2 px-6 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">Cancel</button>
+            </div>
+
+            <div class="flex justify-center">
+                <label for="facebook"
+                    class="py-2 px-6 text-white font- rounded-md hover:bg-transparent hover:font-bold hover:border-white focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center space-x-2">
+
+                    <span class="mr-2">
+                        <img src="images/facebook.png" alt="#" class="w-5">
+                    </span>
+                    connect with facebook</label>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

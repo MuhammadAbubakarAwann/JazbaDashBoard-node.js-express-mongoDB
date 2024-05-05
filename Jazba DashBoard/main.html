@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+    
+<body class="bg-black min-h-screen flex flex-col justify-center items-center">
+
+    <div class="absolute top-50 right-0.5 py-2">
+        <button type="button" id="signinBtn" class="bg-cyan-600 py-2 flex text-white font-bold items-center  p-4  rounded-full mr-4 hover:text-cyan-600 hover:bg-white">
+            <span>sign in</span>
+        </button>
+    
+        <button type="button" id="signupBtn" class="bg-cyan-600 flex py-2 text-white font-bold items-center p-4 rounded-full mr-4 mt-4 hover:text-cyan-600 hover:bg-white">
+            <span>sign up</span>
+        </button>
+    </div>
+    <div class="flex flex-col justify-center items-center w-1/2">
+        <img src="./images/Jazba-Innovations-Logo-W.png" width="700px" height="500px" alt="">
+       <br>
+        <p class="text-white text-center">Jazba innovations is not just a company, rather it is the fusion of innovation
+            and passion. It stands out due to its commitment towards redefining the standards of modern landscape.</p>
+    </div>
+    <ul class="notifications">
+    </ul>
+    <div id="successMessage" style="display: none;">Login successful. Redirecting...</div>
+    <!-- Add your script here -->
+    <script type="module" src="./abc.js"></script>
+</body>
+
+</html>

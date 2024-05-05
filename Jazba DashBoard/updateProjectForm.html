@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Add Project</h2>
+        <form action="http://localhost:3000/api/projects" method="POST" class="space-y-4" enctype="multipart/form-data">
+            <div>
+                <label for="projectName" class="block text-sm font-medium text-gray-700">Project Name</label>
+                <input type="text" name="projectName" id="projectName" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div>
+                <label for="projectDescription" class="block text-sm font-medium text-gray-700">Project
+                    Description</label>
+                <textarea name="projectDescription" id="projectDescription" rows="3"
+                    class="mt-1 p-2 border rounded-md w-full"></textarea>
+            </div>
+            <div>
+                <label for="projectImage" class="block text-sm font-medium text-gray-700">Project Image</label>
+                <input type="file" name="projectImage" id="projectImage" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Project Type</label>
+                <div class="mt-1 space-x-4">
+                    <label for="design_projects" class="inline-flex items-center">
+                        <input type="radio" id="design_projects" name="projectType" value="design_projects"
+                            class="text-blue-500 form-radio focus:ring-blue-500">
+                        <span class="ml-2">Design Projects</span>
+                    </label>
+                    <label for="3d_projects" class="inline-flex items-center">
+                        <input type="radio" id="3d_projects" name="projectType" value="3d_projects"
+                            class="text-blue-500 form-radio focus:ring-blue-500">
+                        <span class="ml-2">3D Projects</span>
+                    </label>
+                    <label for="software_projects" class="inline-flex items-center">
+                        <input type="radio" id="software_projects" name="projectType" value="software_projects"
+                            class="text-blue-500 form-radio focus:ring-blue-500">
+                        <span class="ml-2">Software Projects</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" name="updateBtn" id="updateBtn"
+                    class="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Add
+                    Project</button>
+                <button type="button" id="cancelBtn" name="cancelBtn"
+                    class="ml-2 py-2 px-4 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
